@@ -26,8 +26,7 @@ function sortearAmigo(){
     //Sortear un amigo
     let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
     //Mostrar el amigo sorteado
-    document.getElementById('resultado').innerHTML = amigoSorteado;
-    console.log(amigoSorteado);
+    document.getElementById('resultado').innerHTML = 'El amigo sorteado es: ' + amigoSorteado;
 }
 function actualizarLista(){
     //Recorrer la lista de amigos
