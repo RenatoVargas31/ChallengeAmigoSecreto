@@ -11,10 +11,8 @@ function agregarAmigo(){
     }else{
         //Agregar el amigo a la lista de amigos
         amigos.push(amigo);
-        
-        //Mostrar la lista de amigos uno debajo de otro
-        document.getElementById('listaAmigos').innerHTML = amigos.join('<br>');
-    
+        //Actualizar la lista de amigos
+        actualizarLista();
     }
     //Limpiar el input
     document.getElementById('amigo').value = '';
@@ -30,4 +28,13 @@ function sortearAmigo(){
     //Mostrar el amigo sorteado
     document.getElementById('resultado').innerHTML = amigoSorteado;
     console.log(amigoSorteado);
+}
+function actualizarLista(){
+    //Recorrer la lista de amigos
+    let lista = '';
+    amigos.forEach(amigo => {
+        lista += `<li>${amigo}</li>`;
+    });
+    //Mostrar la lista de amigos
+    document.getElementById('listaAmigos').innerHTML = lista;
 }
