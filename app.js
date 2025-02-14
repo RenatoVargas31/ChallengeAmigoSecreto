@@ -19,3 +19,15 @@ function agregarAmigo(){
     //Limpiar el input
     document.getElementById('amigo').value = '';
 }
+function sortearAmigo(){
+    //Comprobar si hay amigos en la lista
+    if(amigos.length === 0){
+        alert('No hay amigos en la lista');
+        return;
+    }
+    //Sortear un amigo
+    let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    //Mostrar el amigo sorteado
+    document.getElementById('resultado').innerHTML = amigoSorteado;
+    console.log(amigoSorteado);
+}
