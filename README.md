@@ -25,6 +25,39 @@ function agregarAmigo() {
     }
     document.getElementById('amigo').value = '';
 }
+```
+### Sortear Amigo
 
+Permite al usuario sortear un amigo de la lista de amigos ingresados
 
-Enlace: https://renatovargas31.github.io/ChallengeAmigoSecreto/
+```javascript
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert('No hay amigos en la lista');
+        return;
+    }
+    let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    document.getElementById('resultado').innerHTML = 'El amigo sorteado es: ' + amigoSorteado;
+}
+```
+### Actualizar lista de Amigos
+
+Actualiza la lista de amigos mostrada en la página.
+
+```javascript
+function actualizarLista() {
+    let lista = '';
+    amigos.forEach(amigo => {
+        lista += `<li>${amigo}</li>`;
+    });
+    document.getElementById('listaAmigos').innerHTML = lista;
+}
+```
+## Ejecución
+
+1. Clona el repositorio o descarga los archivos.
+2. Abre index.html en tu navegador web.
+
+## Enlace
+
+https://renatovargas31.github.io/ChallengeAmigoSecreto/
