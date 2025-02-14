@@ -25,4 +25,6 @@ function agregarAmigo() {
     }
     document.getElementById('amigo').value = '';
 }
+
+
 Enlace: https://renatovargas31.github.io/ChallengeAmigoSecreto/
